@@ -6,7 +6,7 @@ export interface InvestmentInput
     expectedReturn:number
 }
 
-export interface annualData
+export interface resultData
 {
     year: number,
     interest: number,

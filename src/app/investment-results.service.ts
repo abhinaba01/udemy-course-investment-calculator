@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { resultData } from './investment-data.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class InvestmentResultsService {
+  resultData!: resultData[];
+
   constructor() {}
 
   calculateInvestmentResults(
@@ -30,7 +33,7 @@ export class InvestmentResultsService {
         totalAmountInvested: initialInvestment + annualInvestment * year,
       });
     }
-
+    this.resultData = annualData;
     return annualData;
   }
 }
